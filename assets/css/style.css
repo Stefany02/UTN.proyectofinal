@@ -1,3 +1,5 @@
+/* font-family: 'Rajdhani', sans-serif;  */
+
 body {
     --bs-body-bg: rgb(127, 249, 255);
 }
@@ -13,45 +15,47 @@ body {
 }
 
 ul.dropdown-menu.show{
-    background-color: #2c2a28;
+    background-color: #f8ae65;
+    --bs-dropdown-link-hover-bg:hwb(309 28% 23% / 0.448);
+    --bs-dropdown-link-active-bg: #665b5a94;
 }
 
 input.form-control{
     background-color: #eac492;
 }
 
-/*carusel*/
-
-.carousel{
-    width: 450PX;
-    height: 600px;
-}
-
-div#sliderB5{
-    margin-left: 35rem;
+/*video*/
+  .video-container {
+    position: relative;
     
-}
+  }
 
-section.intro{
-    background-image: linear-gradient(rgba(6, 5, 10, 0.889),
-     rgba(16, 15, 38, 0.618)), 
-    url(../img/ciudad\ nevada.jpg);
-}
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  }
 
-/*menu temporada*/
-.dropdown-item{
-    background-color: #eac492 !important;
-    --bs-dropdown-link-color: rgb(8, 0, 250); 
-    --bs-dropdown-link-hover-bg: #344;
-}
+  .cards{
+    position: absolute;
+    bottom: 30rem;
+    left: 30rem;
+    z-index: 6; /* Asegura que esté por encima del video */
+    font-size: 30px;
+    font-family: 'Oooh Baby';
+  }
 
+ 
 
 
 h1.catalogo{
     margin-top: rem !important;
     font-weight:lighter;
     font-size: 4rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:sans-serif;
     color:rgb(195, 161, 77);
     -webkit-text-stroke: 1px hsl(47, 80%, 21%);
     margin: auto;
@@ -59,7 +63,9 @@ h1.catalogo{
     align-items: center;
     justify-content: center;
     background-color: #faebd7;
+    font-family:initial;
 }
+
 
 
 
@@ -100,13 +106,3 @@ h1.catalogo{
     -webkit-text-stroke: 1px hsl(0, 0%, 0%);
 }
 
-/*Footer*/ 
-footer{
-    background-color: #2590b1;
-    clear: both;
-    color:#eac492;
-    padding: 3em 0;
-    margin-top: 2em;
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
