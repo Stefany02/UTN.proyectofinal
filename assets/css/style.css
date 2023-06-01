@@ -3,7 +3,7 @@
 body {
     --bs-body-bg: rgb(127, 249, 255);
 }
-
+/*Navbar y encabezado */
 .mb-3{
     display:flex;
     align-items:Center;
@@ -23,8 +23,9 @@ ul.dropdown-menu.show{
 input.form-control{
     background-color: #eac492;
 }
+/*termina nabvar y encabezado*/
 
-/*video*/
+/*empieza banner*/
   .video-container {
     position: relative;
     
@@ -48,9 +49,9 @@ input.form-control{
     font-family: 'Oooh Baby';
   }
 
+  /*termina banner */
  
-
-
+/*empieza catalogo*/
 h1.catalogo{
     margin-top: rem !important;
     font-weight:lighter;
@@ -65,9 +66,6 @@ h1.catalogo{
     background-color: #faebd7;
     font-family:initial;
 }
-
-
-
 
 .producto1{
     display: inline-flex;
@@ -106,3 +104,40 @@ h1.catalogo{
     -webkit-text-stroke: 1px hsl(0, 0%, 0%);
 }
 
+/* boton home */
+i.fa-brands.fa-fort-awesome-alt:hover{
+  color:rgb(243, 244, 255) !important;
+}
+
+
+
+/*empieza footer */
+.footer{
+    position:relative;
+    background-color: #2590b1;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.redes{
+display:inherit;
+justify-content: center;
+align-items: center;
+list-style: none;
+padding: 0;
+font-size:3rem;
+}
+
+.fa-xs{
+font-size:0.35em;
+  }
+
+.fa-xs:hover{
+    color:#ffc107!important;
+    text-emphasis-color: #000;
+}
+
+/* termina footer */
+
+
+/*voy agregar una imagen cuando empieza cada sección, con el nombre de la estación*/
