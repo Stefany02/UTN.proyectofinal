@@ -1,7 +1,7 @@
 /* font-family: 'Rajdhani', sans-serif;  */
 
 body {
-    --bs-body-bg: rgb(127, 249, 255);
+background-color:rgb(185, 227, 219) !important;
 }
 /*Navbar y encabezado */
 .mb-3{
@@ -64,7 +64,7 @@ h1.catalogo{
     align-items: center;
     justify-content: center;
     background-color: #faebd7;
-    font-family:initial;
+    font-family:'Oooh Baby', sans-serif;
 }
 
 .producto1{
@@ -73,6 +73,7 @@ h1.catalogo{
     margin-block: 10rem;
     width: 600px;
     height: 150px;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 
@@ -80,6 +81,7 @@ h1.catalogo{
     display: inline-flex;
     margin-top: 2rem;
     margin-block: 10rem;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 .imgprod{
@@ -95,8 +97,9 @@ h1.catalogo{
 }
 .card-body{
     color:azure !important;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
 }
+
 
 .botones{
     font-weight: 500;
@@ -109,12 +112,20 @@ i.fa-brands.fa-fort-awesome-alt:hover{
   color:rgb(243, 244, 255) !important;
 }
 
+.casa{
+    margin-left: 90%;
+}
+
+
+
+
+
 
 
 /*empieza footer */
 .footer{
     position:relative;
-    background-color: #2590b1;
+    background-color: #205277;
     padding: 1rem;
     margin-top: 1rem;
 }
@@ -140,4 +151,63 @@ font-size:0.35em;
 /* termina footer */
 
 
-/*voy agregar una imagen cuando empieza cada sección, con el nombre de la estación*/
+/*voy agregar un fondo cuando empieza cada sección, con el nombre de la estación*/
+h1.verano{
+    color:#0a0606;
+    font-weight:lighter;
+    font-size: 2rem;
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(#8f80cb,#83dce1b0);
+    -webkit-text-stroke: 1px hsl(0, 5%, 8%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+h1.otoño{
+    color:#000000;
+    font-weight:lighter;
+    font-size: 2zrem;
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(#8f80cb,#83dce1b0);
+    -webkit-text-stroke: 1px hsl(0, 4%, 5%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.invierno{
+    color:#000000;
+    font-weight:lighter;
+    font-size: 2rem;
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(#8f80cb,#83dce1b0);
+    -webkit-text-stroke: 1px hsl(0, 0%, 6%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.primavera{
+    color:#030303;
+    font-weight:lighter;
+    font-size: 2rem;
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(#8f80cb,#83dce1b0);
+    -webkit-text-stroke: 1px hsl(0, 0%, 1%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*contenedores de audio*/
+h6.musiquita{
+    display: inline-block;
+  }
+
+
+/*carrito*/
