@@ -1,52 +1,78 @@
-// Seleccionar elementos del DOM
-const carrito = document.getElementById('carrito');
-const listaProductos = document.getElementById('lista-carrito');
-const vaciarCarrito = document.getElementById('vaciar-carrito');
-const productos = document.querySelectorAll('.agregar-carrito');
+// Obtener todos los botones "Agregar" en la página
+const agregarBotones = document.querySelectorAll('.agregar-carrito');
+const carritoProductos = document.getElementById('carritoProductos');
+const carrito = [];
 
-// Función para agregar un producto al carrito
-function agregarProducto(e) {
-  e.preventDefault();
-  const producto = e.target.parentElement.parentElement;
-  const productoInfo = obtenerProductoInfo(producto);
-  insertarProductoEnCarrito(productoInfo);
-}
+// Manejar el clic en el botón "Agregar"
+agregarBotones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const productoId = boton.dataset.id;
+    const productoNombre = boton.parentNode.parentNode.querySelector('.card-title').textContent;
+    const productoPrecio = boton.parentNode.parentNode.querySelector('.card-text').textContent;
 
-// Función para obtener la información de un producto
-function obtenerProductoInfo(producto) {
-  const imagen = producto.querySelector('.imgprod').src;
-  const nombre = producto.querySelector('.card-title').textContent;
-  const precio = producto.querySelector('.card-text').textContent;
-  return { imagen, nombre, precio };
-}
+    // Verificar si el producto ya está en el carrito
+    const productoExistente = carrito.find(producto => producto.id === productoId);
 
-// Función para insertar un producto en el carrito
-function insertarProductoEnCarrito(producto) {
-  const row = document.createElement('tr');
-  row.innerHTML = `
-    <td>
-      <img src="${producto.imagen}" width="50">
-    </td>
-    <td>${producto.nombre}</td>
-    <td>${producto.precio}</td>
-    <td>
-      <a href="#" class="borrar-producto"><i class="fas fa-times-circle"></i></a>
-    </td>
-  `;
-  listaProductos.appendChild(row);
-}
+    if (productoExistente) {
+      // Si el producto ya está en el carrito, incrementar la cantidad
+      productoExistente.cantidad += 1;
+    } else {
+      // Si el producto no está en el carrito, agregarlo
+      const nuevoProducto = {
+        id: productoId,
+        nombre: productoNombre,
+        precio: parseFloat(productoPrecio.replace('$', '')),
+        cantidad: 1
+      };
 
-// Función para vaciar el carrito
-function vaciarCarritoCompras() {
-  while (listaProductos.firstChild) {
-    listaProductos.removeChild(listaProductos.firstChild);
+      carrito.push(nuevoProducto);
+    }
+
+    // Actualizar la interfaz del carrito
+    actualizarCarrito();
+  });
+});
+
+// Manejar el clic en el botón "Eliminar" del carrito
+function eliminarProductoCarrito(productoId) {
+  const productoIndex = carrito.findIndex(producto => producto.id === productoId);
+  if (productoIndex !== -1) {
+    carrito.splice(productoIndex, 1);
+    // Actualizar la interfaz del carrito
+    actualizarCarrito();
   }
 }
 
-// Event listeners
-productos.forEach((producto) => {
-  producto.addEventListener('click', agregarProducto);
+// Actualizar la interfaz del carrito
+function actualizarCarrito() {
+  carritoProductos.innerHTML = '';
+
+  carrito.forEach(producto => {
+    const itemCarrito = document.createElement('div');
+    itemCarrito.classList.add('item-carrito');
+    itemCarrito.innerHTML = `
+        <span>${producto.nombre}</span>
+        <span>${producto.cantidad}</span>
+        <span>$${producto.precio.toFixed(2)}</span>
+        <button class="btn btn-sm btn-danger" onclick="eliminarProductoCarrito('${producto.id}')">Eliminar</button>
+      `;
+
+    carritoProductos.appendChild(itemCarrito);
+  });
+
+  calcularTotal();
+}
+
+// Calcular el total de la compra
+function calcularTotal() {
+  const total = carrito.reduce((acumulador, producto) => acumulador + (producto.precio * producto.cantidad), 0);
+  document.getElementById('totalCompra').textContent = `$${total.toFixed(2)}`;
+}
+
+// Manejar el clic en el botón "Finalizar Compra"
+const finalizarCompraBtn = document.getElementById('finalizarCompraBtn');
+finalizarCompraBtn.addEventListener('click', () => {
+  // Aquí puedes agregar la lógica para finalizar la compra
+  console.log('Compra finalizada');
+  console.log('Productos en el carrito:', carrito);
 });
-
-vaciarCarrito.addEventListener('click', vaciarCarritoCompras);
-
