@@ -103,20 +103,19 @@
     <div class="container-fluid">
       <h1 class="verano">VERANO</h1>
       <section class="verano">
-        <div class="producto1" id="productos">
+        <div class="producto1">
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
                 <img class="imgprod" src="./assets/img/productos/verano/camisa mila.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body" id="1">
                   <h5 class="card-title">Camisa Mila</h5>
                   <p class="card-text">$4.500</p>
                 </div>
                 <div class="botones">
                   <div class="btn-group">
-                    <a href=" " class="btn">Detalles</a>
-                    <button class="agregar-carrito" data-id="1" data-nombre="Camisa Mila" data-precio="$4500">Agregar al carrito</button>
-
+                    <a href="#" class="btn">Detalles</a>
+                    <a href="" class="btn input agregar-carrito" data-id="1">Agregar al carrito</a>
                   </div>
                 </div>
               </div>
@@ -128,14 +127,14 @@
               <div class="card" style="width: 20rem;">
                 <img class="imgprod" src="assets/img/productos/verano/short-y-blazer-vertu-jeans-verano-2023.jpg"
                   class="card-img-top" alt="...">
-                <div class="card-body">
+                <div class="card-body" id="2">
                   <h5 class="card-title">Conjunto Vertu</h5>
                   <p class="card-text">$20.000</p>
                 </div>
                 <div class="botones">
                   <div class="btn-group">
-                    <a href=" " class="btn">Detalles</a>
-                    <a href="./pages/carrito.html" class="btn input agregar-carrito" data-id="2">Agregar</a>
+                    <a href="#" class="btn">Detalles</a>
+                    <a href="" class="btn input agregar-carrito" data-id="2">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -650,8 +649,8 @@
       <a href="https://gmail.com" target="_blank" class="btn btn-outline-warning"><i
           class="fa-regular fa-envelope fa-2x1"></i> Contactanos</a>
       <!-- Button trigger modal -->
-      <a target="_blank" class="btn btn-outline-warning"><i class="fa-solid fa-truck-pickup fa-xs" button type="button"
-          data-bs-toggle="modal" data-bs-target="#exampleModal"> Envios</i></a>
+      <button target="_blank" class="btn btn-outline-warning"><i class="fa-solid fa-truck-pickup fa-xs" button type="button"
+          data-bs-toggle="modal" data-bs-target="#exampleModal"> EnvioS</i></a></button>
     </div>
 
     <!--Usuario y contraseña ventana modal-->
@@ -660,23 +659,53 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3 row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Mail</label>
+                <input type="email" class="form-control" id="inputEmail4">
               </div>
-            </div>
-            <div class="mb-3 row">
-              <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
-              <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword">
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword4">
               </div>
-            </div>
-          </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Dirección 1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Casa, departamento">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Dirección 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Trabajo, Casa de vacaciones">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">Provincia</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Seleccionar</option>
+                  <option>Buenos Aires</option>
+                  <option>CABA</option>
+                  <option>Misiones</option>
+                  <option>Cordoba</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">CP</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Registro y Envio 
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+              </div>
+            </form>
         </div>
       </div>
     </div>
