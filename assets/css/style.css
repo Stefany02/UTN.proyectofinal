@@ -235,7 +235,9 @@ i.fa-solid.fa-cart-shopping.fa-2x1:hover{
     display: block;
   }
   
-
-
-/*pagina carrito*/
+/*DESCRIPCION PRODUCTOS*/
+div#descripcion{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
   
