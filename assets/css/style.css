@@ -2,6 +2,7 @@
 
 body {
 background-color:rgb(185, 227, 219) !important;
+font-size: 16px;
 }
 /*Navbar y encabezado */
 .mb-3{
@@ -42,10 +43,10 @@ input.form-control{
 
   .cards{
     position: absolute;
-    bottom: 30rem;
-    left: 30rem;
+    bottom: 30%;
+    left: 30%;
     z-index: 6; /* Asegura que esté por encima del video */
-    font-size: 30px;
+    font-size: 3vw;
     font-family: 'Oooh Baby';
   }
 
@@ -53,9 +54,9 @@ input.form-control{
  
 /*empieza catalogo*/
 h1.catalogo{
-    margin-top: rem !important;
+    margin-top:1 rem !important;
     font-weight:lighter;
-    font-size: 4rem;
+    font-size: 4vw;
     font-family:sans-serif;
     color:rgb(195, 161, 77);
     -webkit-text-stroke: 1px hsl(47, 80%, 21%);
@@ -68,32 +69,29 @@ h1.catalogo{
 }
 
 .producto1{
-    display: inline-flex;
-    margin-top: 2rem;
-    margin-block: 10rem;
-    width: 600px;
-    height: 150px;
+    display: flex;
+    margin-top:5%;
+   margin-left: 8%;
     font-family: 'Rajdhani', sans-serif;
 }
 
 
 .producto2{
-    display: inline-flex;
-    margin-top: 2rem;
-    margin-block: 10rem;
+    display: flex;
+    margin-left: 8%;
     font-family: 'Rajdhani', sans-serif;
 }
 
 .imgprod{
-    width: 300px;
-    height: 300px; 
+    width: 100%;
+    height: auto; 
 }
 
 .card{
     --bs-card-bg: #2590b1 !important;
-    position:fixed;
-    margin-right: 12rem;
-    margin-left: 3rem;
+    position: relative;
+    flex-basis: calc(33.33% - 2rem);
+    margin-bottom: 8rem;
 }
 .card-body{
     color:azure !important;
@@ -113,8 +111,32 @@ i.fa-brands.fa-fort-awesome-alt:hover{
 }
 
 .casa{
-    margin-left: 90%;
+    margin-left:auto;
 }
+
+/*boton card*/
+.btn-group:hover{
+    color:#0734ff;
+}
+
+.btn-group {
+    border-radius: var(--bs-border-radius);
+    background-color: #08adc0;
+    border: 0,4px solid black;
+}
+
+a.btn{
+    border: 1px solid black;
+}
+
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+
 
 
 
@@ -131,7 +153,6 @@ i.fa-brands.fa-fort-awesome-alt:hover{
 }
 
 .redes{
-display:inherit;
 justify-content: center;
 align-items: center;
 list-style: none;
@@ -146,6 +167,11 @@ font-size:0.35em;
 .fa-xs:hover{
     color:#ffc107!important;
     text-emphasis-color: #000;
+    font-size: 0.35rem;
+}
+
+i.fa-solid.fa-truck-pickup.fa-xs{
+    text-emphasis-color: #000;
 }
 
 input#inputPassword4{
@@ -156,56 +182,20 @@ input#inputPassword4{
 
 
 /*voy agregar un fondo cuando empieza cada sección, con el nombre de la estación*/
-h1.verano{
-    color:#0a0606;
-    font-weight:lighter;
-    font-size: 2rem;
-    font-family: 'Rajdhani', sans-serif;
-    background: linear-gradient(#8f80cb,#83dce1b0);
-    -webkit-text-stroke: 1px hsl(0, 5%, 8%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-h1.otoño{
-    color:#000000;
-    font-weight:lighter;
-    font-size: 2zrem;
-    font-family: 'Rajdhani', sans-serif;
-    background: linear-gradient(#8f80cb,#83dce1b0);
-    -webkit-text-stroke: 1px hsl(0, 4%, 5%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1.invierno{
-    color:#000000;
-    font-weight:lighter;
-    font-size: 2rem;
-    font-family: 'Rajdhani', sans-serif;
-    background: linear-gradient(#8f80cb,#83dce1b0);
-    -webkit-text-stroke: 1px hsl(0, 0%, 6%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h1.primavera{
-    color:#030303;
-    font-weight:lighter;
-    font-size: 2rem;
-    font-family: 'Rajdhani', sans-serif;
-    background: linear-gradient(#8f80cb,#83dce1b0);
-    -webkit-text-stroke: 1px hsl(0, 0%, 1%);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+h1.verano,
+h1.otoño,
+h1.invierno,
+h1.primavera {
+  color: #0a0606;
+  font-weight: lighter;
+  font-size: 2rem;
+  font-family: 'Rajdhani', sans-serif;
+  background: linear-gradient(#8f80cb, #83dce1b0);
+  -webkit-text-stroke: 1px hsl(0, 5%, 8%);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*contenedores de audio*/
@@ -240,4 +230,33 @@ div#descripcion{
     font-family:Arial, Helvetica, sans-serif;
     font-size: larger;
 }
+  /* Media queries para diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas de hasta 768px de ancho */
+    .producto1,
+    .producto2 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   
+    .card {
+      flex-basis: 100%;
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Estilos para pantallas de hasta 480px de ancho */
+    .producto1,
+    .producto2 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .imgprod {
+      max-width: 100%;
+    }
+  }
