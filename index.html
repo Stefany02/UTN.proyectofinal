@@ -67,23 +67,23 @@
 
   <!--aca empieza el banner, y el cuerpo de la pagina-->
   <div class="container-fluid">
-  <section class="intro" id="intro">
-    <div class="video-container">
-      <video class="video-player__viewer" data-video-player--video-player-target="video"
-        data-action="click->video-player--video-player#togglePlay timeupdate->video-player--video-player#progressUpdate loadedmetadata->video-player--video-player#setVideoDuration"
-        poster="https://mixkit.imgix.net/videos/preview/mixkit-portrait-of-two-funny-girls-among-many-flowers-42280-0.jpg?q=80&amp;auto=format%2Ccompress"
-        src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-two-funny-girls-among-many-flowers-42280-large.mp4"
-        controlslist="nodownload" disablepictureinpicture="" autoplay="" loop="" muted="" max-width:100%>
-      </video>
-      <div class="gradient-overlay"></div>
-      <div class="cards">
-        <div class="card-body">
-          Bienvenida, llegaste aquí a ser feliz
+    <section class="intro" id="intro">
+      <div class="video-container">
+        <video class="video-player__viewer" data-video-player--video-player-target="video"
+          data-action="click->video-player--video-player#togglePlay timeupdate->video-player--video-player#progressUpdate loadedmetadata->video-player--video-player#setVideoDuration"
+          poster="https://mixkit.imgix.net/videos/preview/mixkit-portrait-of-two-funny-girls-among-many-flowers-42280-0.jpg?q=80&amp;auto=format%2Ccompress"
+          src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-two-funny-girls-among-many-flowers-42280-large.mp4"
+          controlslist="nodownload" disablepictureinpicture="" autoplay="" loop="" muted="" max-width:100%>
+        </video>
+        <div class="gradient-overlay"></div>
+        <div class="cards">
+          <div class="card-body">
+            Bienvenida, llegaste aquí a ser feliz
+          </div>
         </div>
       </div>
-    </div>
 
-  </section>
+    </section>
   </div>
 
   <!--termina banner y cuerpo-->
@@ -92,10 +92,10 @@
   <h1 class="catalogo">Catálogo</h1>
   <!--verano-->
   <div id="verano" class="about">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12">
-          <img src="./assets/img/VERANOO.jpg" class="img-fluid" w="100" alt="...">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/img/VERANOO.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
     </div>
@@ -104,135 +104,133 @@
       </audio>
       <h6 class="musiquita">Click aquí para musiquita </h6>
     </div>
-    <div class="container-fluid">
-      <h1 class="verano">VERANO</h1>
-      <section class="verano">
-        <div class="producto1">
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/camisa mila.jpg" class="img-fluid w-100" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Camisa Mila</h5>
-                  <p class="card-text">$4.500</p>
-                </div>
-                <div class="botones">
-                  <div class="btn-group">
-                    <a href="./pages/detalles.html?id=1" data-id="1" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="1" data-nombre="Camisa Mila"
-                      data-precio="4500">Agregar</a>
-                  </div>
-                </div>
-              </div>
+    <h1 class="verano">VERANO</h1>
+    <!--<div class="container-fluid">-->
+    <section class="verano container-fluid">
+      <div class="producto1">
+        <div class="row row-cols-2">
+          <div class="card col-md-4">
+            <img src="./assets/img/productos/verano/camisa mila.jpg" class="img-fluid w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Camisa Mila</h5>
+              <p class="card-text">$4.500</p>
             </div>
-          </div>
-
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/verano/short.jpg" class="img-fluid w-100" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Conjunto Vertu</h5>
-                  <p class="card-text">$20.000</p>
-                </div>
-                <div class="botones">
-                  <div class="btn-group">
-                    <a href="./pages/detalles.html?id=2" data-id="2" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="2" data-nombre="Conjunto Vertu"
-                      data-precio="20000">Agregar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/vertu conjunto.jpg" class="img-fluid w-100" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Conjunto Sonora</h5>
-                  <p class="card-text">$12.000</p>
-                </div>
-                <div class="botones">
-                  <div class="btn-group">
-                    <a href="./pages/detalles.html?id=3" data-id="3" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="3" data-nombre="Conjunto Sonora"
-                      data-precio="12000" onclick="agregarAlCarrito(this)">Agregar</a>
-                  </div>
-                </div>
+            <div class="botones">
+              <div class="btn-group">
+                <a href="./pages/detalles.html?id=1" data-id="1" class="btn">Detalles</a>
+                <a href="#" class="btn input agregar-carrito" data-id="1" data-nombre="Camisa Mila"
+                  data-precio="4500">Agregar</a>
               </div>
             </div>
           </div>
         </div>
 
 
-        <div class="producto2">
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/vestido candi.jpeg" class="img-fluid w-100" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Vestido Candi</h5>
-                  <p class="card-text">$15.000</p>
-                </div>
-                <div class="botones">
-                  <div class="btn-group">
-                    <a href="./pages/detalles.html?id=4" data-id="4" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="4" data-nombre="Vestido Candi"
-                      data-precio="15000">Agregar</a>
-                  </div>
-                </div>
-              </div>
+        <div class="row row-cols-2">
+          <div class="card col-md-4">
+            <img src="assets/img/productos/verano/short.jpg" class="img-fluid w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Conjunto Vertu</h5>
+              <p class="card-text">$20.000</p>
             </div>
-          </div>
-
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/vestido lili.jpg" class="img-fluid w-100" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Vestido Lili</h5>
-                  <p class="card-text">$15.000</p>
-                </div>
-                <div class="botones">
-                  <div class="btn-group">
-                    <a href="./pages/detalles.html?id=5" data-id="5" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="5" data-nombre="Vestido Lili"
-                      data-precio="15000">Agregar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="container text-center">
-            <div class="row row-cols-2">
-              <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/vestido pipe.jpg" class="img-fluid w-100" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Vestido Pipa</h5>
-                  <p class="card-text">$15.000</p>
-                </div>
-                <div class="botones">
-                  <div class="btn-group">
-                    <a href="./pages/detalles.html?id=6" data-id="6" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="6" data-nombre="Vestido Pipa"
-                      data-precio="15000">Agregar</a>
-                  </div>
-                </div>
+            <div class="botones">
+              <div class="btn-group">
+                <a href="./pages/detalles.html?id=2" data-id="2" class="btn">Detalles</a>
+                <a href="#" class="btn input agregar-carrito" data-id="2" data-nombre="Conjunto Vertu"
+                  data-precio="20000">Agregar</a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  
 
-    <div class="casa">
-      <a href="#intro" class="btn btn-warning"><i class="fa-brands fa-fort-awesome-alt" button type="button">
-          Home</i></a>
-    </div>
+
+
+        <div class="row row-cols-2">
+          <div class="card col-md-4">
+            <img src="./assets/img/productos/verano/vertu conjunto.jpg" class="img-fluid w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Conjunto Sonora</h5>
+              <p class="card-text">$12.000</p>
+            </div>
+            <div class="botones">
+              <div class="btn-group">
+                <a href="./pages/detalles.html?id=3" data-id="3" class="btn">Detalles</a>
+                <a href="#" class="btn input agregar-carrito" data-id="3" data-nombre="Conjunto Sonora"
+                  data-precio="12000" onclick="agregarAlCarrito(this)">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="producto2">
+        
+          <div class="row row-cols-2">
+            <div class="card col-md-4">
+              <img src="./assets/img/productos/verano/vestido candi.jpeg" class="img-fluid w-100" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Vestido Candi</h5>
+                <p class="card-text">$15.000</p>
+              </div>
+              <div class="botones">
+                <div class="btn-group">
+                  <a href="./pages/detalles.html?id=4" data-id="4" class="btn">Detalles</a>
+                  <a href="#" class="btn input agregar-carrito" data-id="4" data-nombre="Vestido Candi"
+                    data-precio="15000">Agregar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+
+
+        <div class="row row-cols-2">
+          <div class="card col-md-4">
+            <img src="./assets/img/productos/verano/vestido lili.jpg" class="img-fluid w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Vestido Lili</h5>
+              <p class="card-text">$15.000</p>
+            </div>
+            <div class="botones">
+              <div class="btn-group">
+                <a href="./pages/detalles.html?id=5" data-id="5" class="btn">Detalles</a>
+                <a href="#" class="btn input agregar-carrito" data-id="5" data-nombre="Vestido Lili"
+                  data-precio="15000">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row row-cols-2">
+          <div class="card col-md-4">
+            <img src="./assets/img/productos/verano/vestido pipe.jpg" class="img-fluid w-100" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Vestido Pipa</h5>
+              <p class="card-text">$15.000</p>
+            </div>
+            <div class="botones">
+              <div class="btn-group">
+                <a href="./pages/detalles.html?id=6" data-id="6" class="btn">Detalles</a>
+                <a href="#" class="btn input agregar-carrito" data-id="6" data-nombre="Vestido Pipa"
+                  data-precio="15000">Agregar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <div class="casa">
+    <a href="#intro" class="btn btn-warning"><i class="fa-brands fa-fort-awesome-alt" button type="button">
+        Home</i></a>
+  </div>
   </div>
   <!--termina verano-->
 

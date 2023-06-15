@@ -71,14 +71,9 @@ input.form-control{
   /*termina banner */
 
 /*verano*/
-
-
-
-
-
-
-
-
+.full-width {
+  width: 100vw; /* 100% del ancho de la ventana del navegador */
+}
  
 /*empieza catalogo*/
 h1.catalogo{
@@ -102,6 +97,8 @@ h1.catalogo{
     margin-top:5%;
    margin-left: 8%;
     font-family: 'Rajdhani', sans-serif;
+    max-width: 100%;
+    height: auto !important;
 }
 
 
@@ -121,12 +118,16 @@ h1.catalogo{
     position: relative;
     flex-basis: calc(33.33% - 2rem);
     margin-bottom: 8rem;
+  
 }
 .card-body{
     color:azure !important;
     font-family: 'Rajdhani', sans-serif;
+   
 }
-
+.card.col-md-4{
+  width: 300px;
+}
 
 .botones{
     font-weight: 500;
