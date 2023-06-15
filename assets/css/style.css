@@ -3,6 +3,10 @@
 body {
 background-color:rgb(185, 227, 219) !important;
 font-size: 16px;
+max-width: 100%;
+overflow-x: hidden;
+margin: 0%;
+padding: 0%;
 }
 /*Navbar y encabezado */
 .mb-3{
@@ -27,10 +31,23 @@ input.form-control{
 /*termina nabvar y encabezado*/
 
 /*empieza banner*/
+
+.container-fluid{
+  --bs-gutter-x:0% !important;
+
+}
+
+
+
   .video-container {
     position: relative;
-    
+  
   }
+  
+  video.video-player__viewer{
+    width: 100% !important;
+  }
+
 
   .gradient-overlay {
     position: absolute;
@@ -39,6 +56,7 @@ input.form-control{
     width: 450%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    
   }
 
   .cards{
@@ -51,6 +69,16 @@ input.form-control{
   }
 
   /*termina banner */
+
+/*verano*/
+
+
+
+
+
+
+
+
  
 /*empieza catalogo*/
 h1.catalogo{
@@ -66,6 +94,7 @@ h1.catalogo{
     justify-content: center;
     background-color: #faebd7;
     font-family:'Oooh Baby', sans-serif;
+
 }
 
 .producto1{
@@ -230,9 +259,10 @@ div#descripcion{
     font-family:Arial, Helvetica, sans-serif;
     font-size: larger;
 }
-  /* Media queries para diferentes tamaños de pantalla */
+/*
+   Media queries para diferentes tamaños de pantalla 
 @media screen and (max-width: 768px) {
-    /* Estilos para pantallas de hasta 768px de ancho */
+     Estilos para pantallas de hasta 768px de ancho 
     .producto1,
     .producto2 {
       flex-direction: column;
@@ -248,7 +278,7 @@ div#descripcion{
   }
   
   @media screen and (max-width: 480px) {
-    /* Estilos para pantallas de hasta 480px de ancho */
+     Estilos para pantallas de hasta 480px de ancho 
     .producto1,
     .producto2 {
       flex-direction: column;
@@ -260,7 +290,7 @@ div#descripcion{
       max-width: 100%;
     }
   }
-
+*/
 
 .header .preHeader{
   height: 22px;

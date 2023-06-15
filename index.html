@@ -22,55 +22,58 @@
 </head>
 
 <!--Navbar y encabezado-->
-<header>
-  <nav class="navbar navbar-expand-lg" style="background-color: #faebd7;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/stefanylogo.png" alt="..." width="100px" height="100px">
-      </a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">NUEVO</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              TEMPORADA
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#verano">VERANO</a></li>
-              <li><a class="dropdown-item" href="#otoño">OTOÑO</a></li>
-              <li><a class="dropdown-item" href="#invierno">INVIERNO</a></li>
-              <li><a class="dropdown-item" href="#primavera">PRIMAVERA</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    </div>
-    <div class="shopp">
-      <a class="nav-link active" aria-current="page" href="pages/carrito.html"><i
-          class="fa-solid fa-cart-shopping fa-2x1" title="carrito"></i>
-          <span id="contadorCarrito">0</span>
-      </a>
-      <p class="compra-texto">Compra</p>
-    </div>
-
-  </nav>
-</header>
 
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #faebd7;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/stefanylogo.png" alt="..." width="100px" height="100px">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">NUEVO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                TEMPORADA
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#verano">VERANO</a></li>
+                <li><a class="dropdown-item" href="#otoño">OTOÑO</a></li>
+                <li><a class="dropdown-item" href="#invierno">INVIERNO</a></li>
+                <li><a class="dropdown-item" href="#primavera">PRIMAVERA</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <div class="shopp">
+        <a class="nav-link active" aria-current="page" href="pages/carrito.html"><i
+            class="fa-solid fa-cart-shopping fa-2x1" title="carrito"></i>
+          <span id="contadorCarrito">0</span>
+        </a>
+        <p class="compra-texto">Compra</p>
+      </div>
+    </nav>
+  </header>
+
+
   <!--termina el navbar y encabezado-->
 
 
   <!--aca empieza el banner, y el cuerpo de la pagina-->
+  <div class="container-fluid">
   <section class="intro" id="intro">
     <div class="video-container">
       <video class="video-player__viewer" data-video-player--video-player-target="video"
         data-action="click->video-player--video-player#togglePlay timeupdate->video-player--video-player#progressUpdate loadedmetadata->video-player--video-player#setVideoDuration"
         poster="https://mixkit.imgix.net/videos/preview/mixkit-portrait-of-two-funny-girls-among-many-flowers-42280-0.jpg?q=80&amp;auto=format%2Ccompress"
         src="https://assets.mixkit.co/videos/preview/mixkit-portrait-of-two-funny-girls-among-many-flowers-42280-large.mp4"
-        controlslist="nodownload" disablepictureinpicture="" autoplay="" loop="" muted="" width="100%">
+        controlslist="nodownload" disablepictureinpicture="" autoplay="" loop="" muted="" max-width:100%>
       </video>
       <div class="gradient-overlay"></div>
       <div class="cards">
@@ -81,16 +84,17 @@
     </div>
 
   </section>
- 
+  </div>
+
   <!--termina banner y cuerpo-->
 
   <!--catalogo-->
   <h1 class="catalogo">Catálogo</h1>
   <!--verano-->
   <div id="verano" class="about">
-    <div class="container text-center">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-sm-12">
           <img src="./assets/img/VERANOO.jpg" class="img-fluid" w="100" alt="...">
         </div>
       </div>
@@ -107,7 +111,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/camisa mila.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/verano/camisa mila.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Camisa Mila</h5>
                   <p class="card-text">$4.500</p>
@@ -115,7 +119,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=1" data-id="1" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="1" data-nombre="Camisa Mila" data-precio="4500">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="1" data-nombre="Camisa Mila"
+                      data-precio="4500">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -125,7 +130,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/verano/short.jpg"  class="img-fluid" alt="...">
+                <img src="assets/img/productos/verano/short.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Conjunto Vertu</h5>
                   <p class="card-text">$20.000</p>
@@ -133,7 +138,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=2" data-id="2" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="2" data-nombre="Conjunto Vertu" data-precio="20000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="2" data-nombre="Conjunto Vertu"
+                      data-precio="20000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -143,7 +149,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/verano/vertu conjunto.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/verano/vertu conjunto.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Conjunto Sonora</h5>
                   <p class="card-text">$12.000</p>
@@ -151,76 +157,82 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=3" data-id="3" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="3" data-nombre="Conjunto Sonora" data-precio="12000" onclick="agregarAlCarrito(this)">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="3" data-nombre="Conjunto Sonora"
+                      data-precio="12000" onclick="agregarAlCarrito(this)">Agregar</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    
 
-    <div class="producto2">
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <div class="card" style="width: 20rem;">
-            <img src="./assets/img/productos/verano/vestido candi.jpeg" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Vestido Candi</h5>
-              <p class="card-text">$15.000</p>
+
+        <div class="producto2">
+          <div class="container text-center">
+            <div class="row row-cols-2">
+              <div class="card" style="width: 20rem;">
+                <img src="./assets/img/productos/verano/vestido candi.jpeg" class="img-fluid w-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vestido Candi</h5>
+                  <p class="card-text">$15.000</p>
+                </div>
+                <div class="botones">
+                  <div class="btn-group">
+                    <a href="./pages/detalles.html?id=4" data-id="4" class="btn">Detalles</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="4" data-nombre="Vestido Candi"
+                      data-precio="15000">Agregar</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="botones">
-              <div class="btn-group">
-                <a href="./pages/detalles.html?id=4" data-id="4" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="4" data-nombre="Vestido Candi" data-precio="15000">Agregar</a>
+          </div>
+
+          <div class="container text-center">
+            <div class="row row-cols-2">
+              <div class="card" style="width: 20rem;">
+                <img src="./assets/img/productos/verano/vestido lili.jpg" class="img-fluid w-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vestido Lili</h5>
+                  <p class="card-text">$15.000</p>
+                </div>
+                <div class="botones">
+                  <div class="btn-group">
+                    <a href="./pages/detalles.html?id=5" data-id="5" class="btn">Detalles</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="5" data-nombre="Vestido Lili"
+                      data-precio="15000">Agregar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container text-center">
+            <div class="row row-cols-2">
+              <div class="card" style="width: 20rem;">
+                <img src="./assets/img/productos/verano/vestido pipe.jpg" class="img-fluid w-100" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vestido Pipa</h5>
+                  <p class="card-text">$15.000</p>
+                </div>
+                <div class="botones">
+                  <div class="btn-group">
+                    <a href="./pages/detalles.html?id=6" data-id="6" class="btn">Detalles</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="6" data-nombre="Vestido Pipa"
+                      data-precio="15000">Agregar</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <div class="card" style="width: 20rem;">
-            <img src="./assets/img/productos/verano/vestido lili.jpg" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Vestido Lili</h5>
-              <p class="card-text">$15.000</p>
-            </div>
-            <div class="botones">
-              <div class="btn-group">
-                <a href="./pages/detalles.html?id=5"  data-id="5" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="5" data-nombre="Vestido Lili" data-precio="15000">Agregar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <div class="card" style="width: 20rem;">
-            <img src="./assets/img/productos/verano/vestido pipe.jpg" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Vestido Pipa</h5>
-              <p class="card-text">$15.000</p>
-            </div>
-            <div class="botones">
-              <div class="btn-group">
-                <a href="./pages/detalles.html?id=6" data-id="6" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="6" data-nombre="Vestido Pipa" data-precio="15000">Agregar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
-  </div>
+  
 
-
-  <div class="casa">
-    <a href="#intro" class="btn btn-warning"><i class="fa-brands fa-fort-awesome-alt" button type="button"> Home</i></a>
-  </div>
+    <div class="casa">
+      <a href="#intro" class="btn btn-warning"><i class="fa-brands fa-fort-awesome-alt" button type="button">
+          Home</i></a>
+    </div>
   </div>
   <!--termina verano-->
 
@@ -246,7 +258,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/otoño/baby chaleco.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/otoño/baby chaleco.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Chaleco Baby</h5>
                   <p class="card-text">$9.000</p>
@@ -254,7 +266,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=7" data-id="7" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="7" data-nombre="Chaleco Baby" data-precio="9000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="7" data-nombre="Chaleco Baby"
+                      data-precio="9000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -264,7 +277,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/otoño/chaleco tejido.jpg" class="img-fluid" alt="...">
+                <img src="assets/img/productos/otoño/chaleco tejido.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Chaleco Kim</h5>
                   <p class="card-text">$12.000</p>
@@ -272,7 +285,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=8" data-id="8" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="8" data-nombre="Chaleco Kim" data-precio="12000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="8" data-nombre="Chaleco Kim"
+                      data-precio="12000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -282,7 +296,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/otoño/chaleco vaquero.jpg" class="img-fluid"alt="...">
+                <img src="./assets/img/productos/otoño/chaleco vaquero.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Chaleco Vaquero</h5>
                   <p class="card-text">$10.000</p>
@@ -290,7 +304,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=9" data-id="9" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="9" data-nombre="Chaleco Vaquero" data-precio="10000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="9" data-nombre="Chaleco Vaquero"
+                      data-precio="10000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -303,7 +318,7 @@
       <div class="container text-center">
         <div class="row row-cols-2">
           <div class="card" style="width: 20rem;">
-            <img src="./assets/img/productos/otoño/chaqueta emilia.jpg" class="img-fluid" alt="...">
+            <img src="./assets/img/productos/otoño/chaqueta emilia.jpg" class="img-fluid w-100" alt="...">
             <div class="card-body">
               <h5 class="card-title">Chaqueta Emilia</h5>
               <p class="card-text">$6.600</p>
@@ -311,7 +326,8 @@
             <div class="botones">
               <div class="btn-group">
                 <a href="./pages/detalles.html?id=10" data-id="10" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="10" data-nombre="Chaleco Emilia" data-precio="6600">Agregar</a>
+                <a href="#" class="btn input agregar-carrito" data-id="10" data-nombre="Chaleco Emilia"
+                  data-precio="6600">Agregar</a>
               </div>
             </div>
           </div>
@@ -321,7 +337,7 @@
       <div class="container text-center">
         <div class="row row-cols-2">
           <div class="card" style="width: 20rem;">
-            <img src="./assets/img/productos/otoño/conjunto China.jpg" class="img-fluid" alt="...">
+            <img src="./assets/img/productos/otoño/conjunto China.jpg" class="img-fluid w-100" alt="...">
             <div class="card-body">
               <h5 class="card-title">Conjunto Ima</h5>
               <p class="card-text">$30.000</p>
@@ -329,7 +345,8 @@
             <div class="botones">
               <div class="btn-group">
                 <a href="./pages/detalles.html?id=11" data-id="11" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="11" data-nombre="Conjunto Ima" data-precio="30000">Agregar</a>
+                <a href="#" class="btn input agregar-carrito" data-id="11" data-nombre="Conjunto Ima"
+                  data-precio="30000">Agregar</a>
               </div>
             </div>
           </div>
@@ -339,7 +356,7 @@
       <div class="container text-center">
         <div class="row row-cols-2">
           <div class="card" style="width: 20rem;">
-            <img src="./assets/img/productos/otoño/sweater jose.jpg" class="img-fluid" alt="...">
+            <img src="./assets/img/productos/otoño/sweater jose.jpg" class="img-fluid w-100" alt="...">
             <div class="card-body">
               <h5 class="card-title">Sweater Jose</h5>
               <p class="card-text">$25.000</p>
@@ -347,7 +364,8 @@
             <div class="botones">
               <div class="btn-group">
                 <a href="./pages/detalles.html?id=12" data-id="12" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="12" data-nombre="Sweater Jose" data-precio="25000">Agregar</a>
+                <a href="#" class="btn input agregar-carrito" data-id="12" data-nombre="Sweater Jose"
+                  data-precio="25000">Agregar</a>
               </div>
             </div>
           </div>
@@ -363,34 +381,97 @@
   <!--termina otoño-->
   <!--invierno-->
   <div id="invierno" class="about">
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./assets/img/WINTER.jpg" class="d-block w-100" alt="...">
+    <div clas="container-fluid">
+      <div class="container-fluid">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./assets/img/WINTER.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="winter">
-      <audio src="./assets/media/X2Download.app - Vivaldi-Las cuatro estaciones-invierno (128 kbps).mp3"
-        controls></audio>
-      <h6 class="musiquita">Click aquí para musiquita </h6>
-    </div>
-    <div class="container-fluid">
-      <h1 class="invierno">INVIERNO</h1>
-      <section class="invierno">
-        <div class="producto1">
+        <div class="winter">
+          <audio src="./assets/media/X2Download.app - Vivaldi-Las cuatro estaciones-invierno (128 kbps).mp3"
+            controls></audio>
+          <h6 class="musiquita">Click aquí para musiquita </h6>
+        </div>
+        <div class="container-fluid">
+          <h1 class="invierno">INVIERNO</h1>
+          <section class="invierno">
+            <div class="producto1">
+              <div class="container text-center">
+                <div class="row row-cols-2">
+                  <div class="card" style="width: 20rem;">
+                    <img src="assets/img/productos/invierno/catalina.jpg" class="img-fluid w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Tapado Catalina</h5>
+                      <p class="card-text">$30.000</p>
+                    </div>
+                    <div class="botones">
+                      <div class="btn-group">
+                        <a href="./pages/detalles.html?id=13" data-id="13" class="btn">Detalles</a>
+                        <a href="#" class="btn input agregar-carrito" data-id="13" data-nombre="Tapado Catalina"
+                          data-precio="30000">Agregar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container text-center">
+                <div class="row row-cols-2">
+                  <div class="card" style="width: 20rem;">
+                    <img src="assets/img/productos/invierno/buzo rosa.jpg" class="img-fluid w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Buzo Rose</h5>
+                      <p class="card-text">$12.000</p>
+                    </div>
+                    <div class="botones">
+                      <div class="btn-group">
+                        <a href="./pages/detalles.html?id=14" data-id="14" class="btn">Detalles</a>
+                        <a href="#" class="btn input agregar-carrito" data-id="14" data-nombre="Buzo Rose"
+                          data-precio="12000">Agregar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container text-center">
+                <div class="row row-cols-2">
+                  <div class="card" style="width: 20rem;">
+                    <img src="assets/img/productos/invierno/buzo celes.jpg" class="img-fluid w-100" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Buzo Cele</h5>
+                      <p class="card-text">$12.000</p>
+                    </div>
+                    <div class="botones">
+                      <div class="btn-group">
+                        <a href="./pages/detalles.html?id=15" data-id="15" class="btn">Detalles</a>
+                        <a href="#" class="btn input agregar-carrito" data-id="15" data-nombre="Buzo Cele"
+                          data-precio="12000">Agregar</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="producto2">
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/invierno/catalina.jpg" class="img-fluid" alt="...">
+                <img src="assets/img/productos/invierno/rose.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Tapado Catalina</h5>
+                  <h5 class="card-title">Tapado Bora</h5>
                   <p class="card-text">$30.000</p>
                 </div>
                 <div class="botones">
                   <div class="btn-group">
-                    <a href="./pages/detalles.html?id=13" data-id="13" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="13" data-nombre="Tapado Catalina" data-precio="30000">Agregar</a>
+                    <a href="./pages/detalles.html?id=16" data-id="16" class="btn">Detalles</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="16" data-nombre="Tapado Bora"
+                      data-precio="30000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -400,15 +481,16 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/invierno/buzo rosa.jpg" class="img-fluid" alt="...">
+                <img src="assets/img/productos/invierno/unnamed (1).jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Buzo Rose</h5>
-                  <p class="card-text">$12.000</p>
+                  <h5 class="card-title">Tapado Nina</h5>
+                  <p class="card-text">$30.000</p>
                 </div>
                 <div class="botones">
                   <div class="btn-group">
-                    <a href="./pages/detalles.html?id=14" data-id="14" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="14" data-nombre="Buzo Rose" data-precio="12000">Agregar</a>
+                    <a href="./pages/detalles.html?id=17" data-id="17" class="btn">Detalles</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="17" data-nombre="Tapado Nina"
+                      data-precio="30000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -418,80 +500,26 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/invierno/buzo celes.jpg" class="img-fluid" alt="...">
+                <img src="assets/img/productos/invierno/bei.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Buzo Cele</h5>
-                  <p class="card-text">$12.000</p>
+                  <h5 class="card-title">Tapado Lola</h5>
+                  <p class="card-text">$30.000</p>
                 </div>
                 <div class="botones">
                   <div class="btn-group">
-                    <a href="./pages/detalles.html?id=15" data-id="15" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="15" data-nombre="Buzo Cele" data-precio="12000">Agregar</a>
+                    <a href="./pages/detalles.html?id=18" data-id="18" class="btn">Detalles</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="18" data-nombre="Tapado Lola"
+                      data-precio="30000">Agregar</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
-
-    <div class="producto2">
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <div class="card" style="width: 20rem;">
-            <img src="assets/img/productos/invierno/rose.jpg" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tapado Bora</h5>
-              <p class="card-text">$30.000</p>
-            </div>
-            <div class="botones">
-              <div class="btn-group">
-                <a href="./pages/detalles.html?id=16" data-id="16" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="16" data-nombre="Tapado Bora" data-precio="30000">Agregar</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <div class="card" style="width: 20rem;">
-            <img src="assets/img/productos/invierno/unnamed (1).jpg" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tapado Nina</h5>
-              <p class="card-text">$30.000</p>
-            </div>
-            <div class="botones">
-              <div class="btn-group">
-                <a href="./pages/detalles.html?id=17" data-id="17" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="17" data-nombre="Tapado Nina" data-precio="30000">Agregar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container text-center">
-        <div class="row row-cols-2">
-          <div class="card" style="width: 20rem;">
-            <img src="assets/img/productos/invierno/bei.jpg" class="img-fluid" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Tapado Lola</h5>
-              <p class="card-text">$30.000</p>
-            </div>
-            <div class="botones">
-              <div class="btn-group">
-                <a href="./pages/detalles.html?id=18" data-id="18" class="btn">Detalles</a>
-                <a href="#" class="btn input agregar-carrito" data-id="18" data-nombre="Tapado Lola" data-precio="30000">Agregar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   </div>
-  </section>
   <div class="casa">
     <a href="#intro" class="btn btn-warning"><i class="fa-brands fa-fort-awesome-alt" button type="button"> Home</i></a>
   </div>
@@ -518,7 +546,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/primavera/bamba vestido.jpg" class="img-fluid"  alt="...">
+                <img src="./assets/img/productos/primavera/bamba vestido.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Vestido Bamba</h5>
                   <p class="card-text">$19.000</p>
@@ -526,7 +554,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=19" data-id="19" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="19" data-nombre="Vestido Bamba" data-precio="19000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="19" data-nombre="Vestido Bamba"
+                      data-precio="19000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -536,7 +565,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="assets/img/productos/primavera/mono.jpg" class="img-fluid" alt="...">
+                <img src="assets/img/productos/primavera/mono.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Monito Luna </h5>
                   <p class="card-text">$22.000</p>
@@ -544,7 +573,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=20" data-id="20" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="20" data-nombre="Monito Luna" data-precio="22000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="20" data-nombre="Monito Luna"
+                      data-precio="22000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -554,7 +584,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/primavera/petra.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/primavera/petra.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Conjunto Petra</h5>
                   <p class="card-text">$35.000</p>
@@ -562,7 +592,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=21" data-id="21" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="21" data-nombre="Conjunto Petra" data-precio="35000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="21" data-nombre="Conjunto Petra"
+                      data-precio="35000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -574,7 +605,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/primavera/Vestido Mara.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/primavera/Vestido Mara.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Vestido Mara</h5>
                   <p class="card-text">$10.000</p>
@@ -582,7 +613,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=22" data-id="22" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="22" data-nombre="Vestido Mara" data-precio="10000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="22" data-nombre="Vestido Mara"
+                      data-precio="10000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -592,7 +624,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/primavera/conjunto Priscila.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/primavera/conjunto Priscila.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Remera Berta</h5>
                   <p class="card-text">$15.000</p>
@@ -600,7 +632,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=23" data-id="23" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="23" data-nombre="Remera Berta" data-precio="15000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="23" data-nombre="Remera Berta"
+                      data-precio="15000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -610,7 +643,7 @@
           <div class="container text-center">
             <div class="row row-cols-2">
               <div class="card" style="width: 20rem;">
-                <img src="./assets/img/productos/primavera/falda Cor.jpg" class="img-fluid" alt="...">
+                <img src="./assets/img/productos/primavera/falda Cor.jpg" class="img-fluid w-100" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Falda Rocio</h5>
                   <p class="card-text">$14.000</p>
@@ -618,7 +651,8 @@
                 <div class="botones">
                   <div class="btn-group">
                     <a href="./pages/detalles.html?id=24" data-id="24" class="btn">Detalles</a>
-                    <a href="#" class="btn input agregar-carrito" data-id="24" data-nombre="Falda Rocio" data-precio="14000">Agregar</a>
+                    <a href="#" class="btn input agregar-carrito" data-id="24" data-nombre="Falda Rocio"
+                      data-precio="14000">Agregar</a>
                   </div>
                 </div>
               </div>
@@ -631,8 +665,7 @@
   <div class="casa">
     <a href="#intro" class="btn btn-warning"><i class="fa-brands fa-fort-awesome-alt" button type="button"> Home</i></a>
   </div>
-  </section>
-  </section>
+  </div>
   <!--termina primavera-->
   <!--termina catalogo-->
   <!--footer-->
@@ -720,4 +753,3 @@
 </body>
 
 </html>
-
