@@ -260,3 +260,8 @@ div#descripcion{
       max-width: 100%;
     }
   }
+
+
+.header .preHeader{
+  height: 22px;
+}
