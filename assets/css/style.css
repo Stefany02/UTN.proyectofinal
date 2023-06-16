@@ -261,39 +261,22 @@ div#descripcion{
     font-family:Arial, Helvetica, sans-serif;
     font-size: larger;
 }
-/*
-   Media queries para diferentes tamaños de pantalla 
-@media screen and (max-width: 768px) {
-     Estilos para pantallas de hasta 768px de ancho 
-    .producto1,
-    .producto2 {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .card {
-      flex-basis: 100%;
-      margin-right: 0;
-      margin-bottom: 2rem;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-     Estilos para pantallas de hasta 480px de ancho 
-    .producto1,
-    .producto2 {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .imgprod {
-      max-width: 100%;
-    }
-  }
-*/
 
 .header .preHeader{
   height: 22px;
 }
+
+section.verano.container-fluid,
+section.otoño.container-fluid,
+section.invierno.container-fluid,
+section.primavera.container-fluid{
+  margin-top: 8%;
+}
+
+a.btn.btn-sm.btn-secondary.col-6,
+a.btn.input.agregar-carrito.btn-sm.btn-primary.col-6,
+.h5.card-title{
+  width: 100%;
+}
+
+
